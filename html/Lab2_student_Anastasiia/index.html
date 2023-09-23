@@ -157,8 +157,8 @@
         </a>
       </p>
       <p>EXERCISE 5</p>
-      <form style="line-height: 0!important;">
-        <table frame="border" align="center" cellpadding="2px">
+      <form>
+        <table frame="border" align="center">
           <tr>
             <td rowspan="2">
               <fieldset>
@@ -237,11 +237,15 @@
                 <table>
                   <tr>
                     <td><p>*Denumirea produs:</p></td>
-                    <td><input type="text" pattern="^[a-zA-Z]+$" required /></td>
+                    <td>
+                      <input type="text" pattern="^[a-zA-Z]+$" required />
+                    </td>
                   </tr>
                   <tr>
                     <td><p>*Producatorul:</p></td>
-                    <td><input type="text" pattern="^[a-zA-Z]+$" required /></td>
+                    <td>
+                      <input type="text" pattern="^[a-zA-Z]+$" required />
+                    </td>
                   </tr>
                   <tr>
                     <td><p>*Cantitatea de produs:</p></td>
@@ -267,8 +271,17 @@
                   <tr>
                     <td><p>*Tipul cardului:</p></td>
                     <td>
-                      <input name="card" type="radio" value="Visa" required />Visa
-                      <input name="card" type="radio" value="Mastercard" />Mastercard
+                      <input
+                        name="card"
+                        type="radio"
+                        value="Visa"
+                        required
+                      />Visa
+                      <input
+                        name="card"
+                        type="radio"
+                        value="Mastercard"
+                      />Mastercard
                     </td>
                   </tr>
                   <tr>
@@ -292,6 +305,29 @@
           </tr>
         </table>
       </form>
+      <p>EXERCISE 6</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4424.494963615039!2d30.739112175914986!3d46.48242468439735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63198f83f79a9%3A0x35e8cf15138b8119!2z0JzQvtC70L7QtNC-0YHRgtGM!5e0!3m2!1sru!2s!4v1695495747169!5m2!1sru!2s"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <p>EXERCISE 7</p>
+      <audio controls>
+        <source src="audio/Harry Styles - As It Was (megapesni.fm).ogg" type="audio/ogg; codecs=vorbis">
+        <a href="audio/Harry Styles - As It Was (megapesni.fm).ogg"></a>
+      </audio><br>
+      <audio controls>  
+      <source src="audio/Harry Styles - As It Was (megapesni.fm).mp3" type="audio/mpeg">
+       <a href="audio/Harry Styles - As It Was (megapesni.fm).mp3"></a>
+      </audio><br>
+      <video width="400" height="300" controls="controls" poster="video/duel.jpg">
+        <source src="video/harry-styles-watermelon-sugar_288216.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <a href="video/harry-styles-watermelon-sugar_288216.mp4">о</a>.
+       </video>
     </body>
   </head>
 </html>
