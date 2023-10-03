@@ -22,7 +22,6 @@ P {
 }
 .p_small {
   font-variant: small-caps;
-  font-weight: lighter;
   text-transform: lowercase;
   color: brown;
 }
@@ -44,21 +43,7 @@ P {
   text-align: right;
   color: rgb(232, 94, 8);
 }
-ol li {
-background-color: blue;
-text-align: center;
-text-transform: uppercase;
-font-size: medium;
-color: #ed0808;
-list-style-type: upper-roman;
 
-}
-ul li {
-  list-style-type:circle;
-  background: hotpink;
-  text-align: left;
-  text-decoration: underline;
-}
 
 table {
   width: 80%;
