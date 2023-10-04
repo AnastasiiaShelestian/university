@@ -5,6 +5,8 @@ int main()
 {
 	int i;
 	i = 69;
+	cout << "  " << endl;
+
 	int number = 72;
 	i = 69 + 72;
 	int arr[3] = {};
