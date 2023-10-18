@@ -1,0 +1,3 @@
+c:\University\university\SO\Lab2\new.txt 
+c:\University\university\SO\Lab2\newfile.txt 
+c:\University\university\SO\Lab3\numbers.txt 
