@@ -1,0 +1,29 @@
+.block1 {
+    height: 200px;
+    width: 50%;
+    background-color: rgb(6, 199, 225);
+}
+.block2 {
+  color: #08d2ed;
+  font-size: 200%;
+  text-align: center;
+  text-decoration: underline;
+}
+.block3 {
+  color: #08ed41d7;
+  font-size: 200%;
+  text-align: center;
+  text-decoration: underline;
+}
+.block4 {
+  color: #4908ed;
+  font-size: 200%;
+  text-align: center;
+  text-decoration: underline;
+}
+.block5 {
+  color: #ed08a8;
+  font-size: 200%;
+  text-align: center;
+  text-decoration: underline;
+}
