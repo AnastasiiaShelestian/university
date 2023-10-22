@@ -100,7 +100,7 @@ input:focus {
 }
 
 .link:link {
-  padding: 10px 20px;
+  color: greenyellow;
 }
 
 .link:hover {
