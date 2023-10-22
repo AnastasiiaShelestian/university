@@ -144,3 +144,20 @@ li:last-child{
   color:rgb(155, 116, 213);
   background-color: #03141f;
 }
+
+body > p {
+  color: green;
+}
+
+legend + div {
+  background-color: rgb(236, 240, 109);
+}
+
+p ~ input {
+  background-color: #f7efe8;
+  border: 1px solid rgb(237, 169, 169);
+}
+
+[type="number"] {
+  box-shadow: 5px 5px 5px #03141f;
+}
