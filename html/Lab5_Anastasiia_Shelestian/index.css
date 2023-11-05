@@ -1,0 +1,217 @@
+.floatleft {
+    float: left;
+    transform: rotate(10deg);
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.floatright {
+    float: right;
+}
+
+.block {
+    display: block;
+}
+
+.skew {
+    transform: skew(15deg, 15deg);
+}
+
+.skew2 {
+    transform: skew(-15deg, -30deg);
+}
+
+.translate {
+    transition: 0.7s linear;
+}
+
+.translate:hover {
+    transform: translate(42px, 18px);
+}
+
+input {
+    transition: all 1s linear;
+}
+
+input:hover {
+    transform: scale(1.1);
+    background-color: rgb(171, 97, 6);
+    border: none;
+}
+
+h1 {
+    background: repeating-linear-gradient(-45deg,
+            transparent 0 20px,
+            rgb(232, 174, 174) 20px 40px);
+}
+
+.inlineBlock {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+.gradient1 {
+    background: radial-gradient(#7185e7, #272b5c);
+}
+
+.gradient2 {
+    background: repeating-radial-gradient(#ffffff, #222223 20%);
+}
+
+.gradient3 {
+    background: conic-gradient(red, orange, yellow, green, blue);
+}
+
+.gradient4 {
+    background: repeating-conic-gradient(rgb(67, 12, 231) 0%,
+            rgb(219, 219, 102) 15%,
+            red 33%);
+}
+
+.animation1 {
+    display: block;
+    margin: 20px;
+    animation: myanim infinite;
+}
+
+.box {
+    text-align: center;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+    background-color: rgb(67, 12, 231);
+    animation: boxanim 5s infinite;
+}
+
+@keyframes boxanim {
+    25% {
+
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: rotate(90deg);
+        transform: scale(1);
+    }
+
+    75% {
+        transform: rotate(135deg);
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: rotate(180deg);
+        transform: scale(1);
+    }
+}
+
+.box1 {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 5px auto;
+    background-color: rgb(30, 29, 32);
+    animation: box1anim 7s infinite;
+}
+
+.box2 {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 5px auto;
+    background-color: rgb(30, 29, 32);
+    animation: box2anim 7s infinite;
+}
+
+.box3 {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 5px auto;
+    background-color: rgb(30, 29, 32);
+    animation: box3anim 7s infinite;
+}
+
+@keyframes box1anim {
+    0% {
+        background-color: #50a22d;
+        transform: scale(1.2);
+    }
+
+    25% {
+        background-color: #50a22d;
+        transform: scale(1.2);
+    }
+
+    30% {
+        background-color: rgb(30, 29, 32);
+    }
+
+    95% {
+        background-color: rgb(30, 29, 32);
+    }
+
+    100% {
+        background-color: #50a22d;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes box2anim {
+    25% {
+        background-color: rgb(30, 29, 32);
+    }
+
+    30% {
+        background-color: #dce22d;
+        transform: scale(1.2);
+    }
+
+    40% {
+        background-color: #dce22d;
+        transform: scale(1.2);
+    }
+
+    45% {
+        background-color: rgb(30, 29, 32);
+    }
+
+    80% {
+        background-color: rgb(30, 29, 32);
+    }
+
+    85% {
+        background-color: #dce22d;
+        transform: scale(1.2);
+    }
+
+    95% {
+        background-color: #dce22d;
+        transform: scale(1.2);
+    }
+
+    100% {
+        background-color: rgb(30, 29, 32);
+    }
+}
+
+@keyframes box3anim {
+    40% {
+        background-color: rgb(30, 29, 32);
+    }
+
+    45% {
+        background-color: rgb(191, 58, 18);
+        transform: scale(1.2);
+    }
+
+    95% {
+        background-color: rgb(191, 58, 18);
+        transform: scale(1.2);
+    }
+
+    100% {
+        background-color: rgb(30, 29, 32);
+    }
+}

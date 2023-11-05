@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Lab2</title>
+</head>
+
+<body>
+  <h1>EXERCISE 1</h1>
+  <p align="center">
+    <img src="images/кит.jpg" width="100" height="100" class="skew"/>
+    <img src="images/кит2.jpg" width="100" height="100"/>
+  </p>
+  <p align="center">
+    <img border="2px" src="images/цветы.jpg" width="175" height="175" class="skew2"/>
+  </p>
+
+  <div class="inlineBlock gradient1"></div>
+  <div class="inlineBlock gradient2"></div>
+  <div class="inlineBlock gradient3"></div>
+  <div class="inlineBlock gradient4"></div>
+
+  <div class="animation1">
+    <div class="box">
+      <div class="box3"></div>  
+      <div class="box2"></div>
+      <div class="box1"></div>
+    </div>
+  </div>
+
+  <table bordercolor="black" border="0px" cellspacing="0px" cellpadding="10px" align="center">
+    <tr>
+      <th><img src="images/кит.jpg" width="100" height="100" class="translate"/></th>
+      <th><img src="images/кит2.jpg" width="100" height="100"  class="translate"/></th>
+    </tr>
+    <tr>
+      <td colspan="2" bordercolor="black" align="center">
+        <img src="images/цветы.jpg" width="175" height="175" border="2px"  class="translate"/>
+      </td>
+    </tr>
+  </table>
+
+  <h1>EXERCISE 2 AND 3</h1>
+  <table class="floatleft" bordercolor="black" border="1px" cellspacing="0px" cellpadding="10px" align="center">
+    <tr>
+      <td colspan="5" align="center">Date despre copiii colaboratorilor</td>
+    </tr>
+    <tr align="center">
+      <th>Nume,prenume</th>
+      <th>Adresa fizică</th>
+      <th>
+        Număr<br />
+        copii<br />
+        minori
+      </th>
+      <th>Prenume copil şi anul de naștere</th>
+      <th>Poza copil</th>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="top">Ivanova Elena</td>
+      <td rowspan="2" valign="top">Str. Codrilor 45, ap.56</td>
+      <td rowspan="2" align="center">2</td>
+      <td valign="top">Elena,2006</td>
+      <td>
+        <a href="html/Elena 2006.html"><img src="images/2.jpg" width="100" height="100" /></a>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        Valeriu, <br />
+        2011
+      </td>
+      <td>
+        <a href="html/Valeru 2011.html"><img src="images/3.jpg" width="100" height="100" /></a>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="3" valign="top">Mihailov Marta</td>
+      <td rowspan="3" valign="top">Str. Pushkin 10, ap.45</td>
+      <td rowspan="3" align="center">3</td>
+      <td valign="top">Ion,2008</td>
+      <td>
+        <a href="html/Ion 2008.html"><img src="images/4.jpg" width="100" height="100" /></a>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        Ecaterina, <br />
+        2010
+      </td>
+      <td>
+        <a href="html/Ecaterina 2010.html"><img src="images/5.jpg" width="100" height="100" /></a>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        Valentin, <br />
+        2011
+      </td>
+      <td>
+        <a href="html/Valentin 2011.html"><img src="images/6.jpg" width="100" height="100" /></a>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top">
+        Cliucnicov <br />
+        Magdalena
+      </td>
+      <td valign="top">Str. Nucilor 34, ap. 22</td>
+      <td align="center">1</td>
+      <td valign="top">
+        Mariuta <br />
+        2012
+      </td>
+      <td>
+        <a href="html/Mariuta 2012.html"><img src="images/6.jpg" width="100" height="100" /></a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left">total</td>
+      <td colspan="3" align="left">6</td>
+    </tr>
+  </table>
+
+  <form class="floatright">
+    <table frame="border" align="center">
+      <tr>
+        <td rowspan="2">
+          <fieldset>
+            <legend>Date personale</legend>
+            <table>
+              <tr>
+                <td>
+                  <p>*Numele:</p>
+                </td>
+                <td>
+                  <input type="text" pattern="^[a-zA-Z]+$" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>*Prenumele:</p>
+                </td>
+                <td>
+                  <input type="text" pattern="^[A-Za-z]+$" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>E-mail:</p>
+                </td>
+                <td><input type="email" /></td>
+              </tr>
+              <tr>
+                <td>
+                  <p>*Data nasterii:</p>
+                </td>
+                <td><input type="date" required /></td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Sexul:</p>
+                </td>
+                <td>
+                  <input name="sex" type="radio" value="F" />F
+                  <input name="sex" type="radio" value="M" />M
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>Telefonul:</p>
+                </td>
+                <td><input type="number" /></td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Raionul:</p>
+                </td>
+                <td>
+                  <select>
+                    <option></option>
+                    <option>Orhei</option>
+                    <option>Soroca</option>
+                    <option>Chisinau</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Studii:</p>
+                </td>
+                <td>
+                  <p>
+                    <input type="checkbox" name="a" value="Colegiu" />Colegiu
+                  </p>
+                  <p>
+                    <input type="checkbox" name="a" value="Licenta" />Licenta
+                  </p>
+                  <p>
+                    <input type="checkbox" name="a" value="Masterat" />Masterat
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Suplimentar:</p>
+                </td>
+                <td>
+                  <textarea placeholder="Scrie aici" maxlength="1000"></textarea>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+        </td>
+        <td>
+          <fieldset>
+            <legend>Date despre product ales</legend>
+            <table>
+              <tr>
+                <td>
+                  <p>*Denumirea produs:</p>
+                </td>
+                <td>
+                  <input type="text" pattern="^[a-zA-Z]+$" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>*Producatorul:</p>
+                </td>
+                <td>
+                  <input type="text" pattern="^[a-zA-Z]+$" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>*Cantitatea de produs:</p>
+                </td>
+                <td><input type="number" required /></td>
+              </tr>
+              <tr>
+                <td>
+                  <p>*Culoarea:</p>
+                </td>
+                <td><input type="color" required /></td>
+              </tr>
+              <tr>
+                <td>
+                  <p>*Marimea:</p>
+                </td>
+                <td><input type="number" required /></td>
+              </tr>
+            </table>
+          </fieldset>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <fieldset>
+            <legend>Date bancare</legend>
+            <table>
+              <tr>
+                <td>
+                  <p>*Tipul cardului:</p>
+                </td>
+                <td>
+                  <input name="card" type="radio" value="Visa" required />Visa
+                  <input name="card" type="radio" value="Mastercard" />Mastercard
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>*Numarul cardului:</p>
+                </td>
+                <td><input type="number" required /></td>
+              </tr>
+              <tr>
+                <td>
+                  <p>*Expira:</p>
+                </td>
+                <td><input type="date" required /></td>
+              </tr>
+            </table>
+          </fieldset>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="reset">Anuleaza</button>
+          <button type="submit">Trimite</button>
+        </td>
+        <td>*Campul trebuie sa fie completat</td>
+      </tr>
+    </table>
+  </form>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+    incididunt ut labore et dolore magna aliqua. Fringilla urna porttitor rhoncus dolor purus non. 
+    Pulvinar mattis nunc sed blandit libero volutpat. Eros in cursus turpis massa tincidunt dui ut. 
+    Facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Nunc mattis enim ut tellus elementum. 
+    Blandit aliquam etiam erat velit. Quis imperdiet massa tincidunt nunc pulvinar. 
+    Faucibus pulvinar elementum integer enim neque volutpat ac. Id aliquet lectus proin nibh nisl condimentum. 
+    Eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Elementum pulvinar etiam non quam lacus. 
+    Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Convallis posuere morbi leo urna molestie at. 
+    Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Dis parturient montes nascetur ridiculus mus mauris vitae. 
+    Viverra aliquet eget sit amet tellus cras adipiscing. Lacus laoreet non curabitur gravida arcu ac tortor.</p>
+
+  <div class="block">
+    <p>EXERCISE 3 and 4</p>
+    <p align="center">
+      <a><img src="images/map.jpg" usemap="#image-map" />
+        <map name="image-map">
+          <area href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D0%B5%D0%B2" coords="457,185,388,131" shape="rect" />
+          <area href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%B0" coords="387,413,440,459"
+            shape="rect" shape="rect" />
+          <area href="https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2" coords="689,154,750,194"
+            shape="rect" />
+        </map>
+      </a>
+    </p>
+  </div>
+
+
+  <p>EXERCISE 6</p>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4424.494963615039!2d30.739112175914986!3d46.48242468439735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63198f83f79a9%3A0x35e8cf15138b8119!2z0JzQvtC70L7QtNC-0YHRgtGM!5e0!3m2!1sru!2s!4v1695495747169!5m2!1sru!2s"
+    width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <p>EXERCISE 7</p>
+  <audio controls>
+    <source src="audio/Harry Styles - As It Was (megapesni.fm).ogg" type="audio/ogg; codecs=vorbis">
+    <a href="audio/Harry Styles - As It Was (megapesni.fm).ogg"></a>
+  </audio><br>
+  <audio controls>
+    <source src="audio/Harry Styles - As It Was (megapesni.fm).mp3" type="audio/mpeg">
+    <a href="audio/Harry Styles - As It Was (megapesni.fm).mp3"></a>
+  </audio><br>
+  <video width="400" height="300" controls="controls" poster="video/duel.jpg">
+    <source src="video/harry-styles-watermelon-sugar_288216.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+    <a href="video/harry-styles-watermelon-sugar_288216.mp4"></a>.
+  </video>
+</body>
+
+</html>
