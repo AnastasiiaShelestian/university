@@ -10,9 +10,6 @@ int main()
 	int number = 72;
 	i = 69 + 72;
 	int arr[3] = {};
-	arr[0] = 0;
-	arr[1] = 0;
-	arr[2] = 0;
 	int* iPointer = &i;
 	number = *iPointer;
 	*iPointer = 15;
