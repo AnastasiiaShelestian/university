@@ -10,6 +10,30 @@ struct DynamicArray
 
 };
 
+void addElementToArray(DynamicArray* arr, int n)
+{
+	if (arr->count == arr->capacity)
+	{
+		size_t newSize = arr->capacity * 2;
+		if (newSize == 0)
+		{
+			newSize = 1;
+		}
+		int* newArr = new int[newSize];
+
+		for (size_t i = 0; i != arr->capacity; i++)
+		{
+			newArr[i] = arr->addres[i];
+		}
+
+		delete[] arr->addres;
+		arr->addres = newArr;
+		arr->capacity = newSize;
+	}
+	arr->addres[arr->count] = n;
+	arr->count++;
+};
+
 
 
 DynamicArray createarray(size_t capacity)
@@ -27,4 +51,6 @@ int main()
 	DynamicArray array = createarray(10);
 	assert(array.capacity == 10);
 	return 0;
+
+
 }
