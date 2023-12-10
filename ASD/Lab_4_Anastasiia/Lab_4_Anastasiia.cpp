@@ -1,56 +1,78 @@
-﻿#include <span>
+﻿#include "dynamicArray.h"
 #include <iostream>
 #include <assert.h>
 
-struct DynamicArray
+static void test1()
 {
-	int* addres;
-	size_t capacity;
-	size_t count;
+	DynamicArray arr = createarray(10);
+	assert(arr.capacity == 10);
+}
 
-};
-
-void addElementToArray(DynamicArray* arr, int n)
+static void test2()
 {
-	if (arr->count == arr->capacity)
-	{
-		size_t newSize = arr->capacity * 2;
-		if (newSize == 0)
-		{
-			newSize = 1;
-		}
-		int* newArr = new int[newSize];
+	DynamicArray arr = createarray();
+	assert(arr.count == 0);
+	addElementToArray(&arr, 5);
+	assert(arr.count == 1);
+}
 
-		for (size_t i = 0; i != arr->capacity; i++)
-		{
-			newArr[i] = arr->addres[i];
-		}
-
-		delete[] arr->addres;
-		arr->addres = newArr;
-		arr->capacity = newSize;
-	}
-	arr->addres[arr->count] = n;
-	arr->count++;
-};
-
-
-
-DynamicArray createarray(size_t capacity)
+static void test3()
 {
-	int* arr = new int[capacity];
-	DynamicArray result;
-	result.addres = arr;
-	result.capacity = capacity;
-	result.count = 0;
-	return result;
+	DynamicArray arr = createarray(1);
+	addElementToArray(&arr, 5);
+	assert(arr.capacity == 1);
+	addElementToArray(&arr, 10);
+	assert(arr.capacity == 2);
+	addElementToArray(&arr, 20);
+	assert(arr.capacity == 4);
+}
+
+static void test4()
+{
+	DynamicArray arr = createarray();
+	addElementToArray(&arr, 5);
+	int el = getElementAtIndex(&arr, 0);
+	assert(el == 5);
+}
+
+static void test5()
+{
+	DynamicArray arr{};
+	addElementToArray(&arr, 5);
+	addElementToArray(&arr, 6);
+	addElementToArray(&arr, 7);
+
+	std::span<int> span = getCurrentSpan(&arr);
+
+	assert(span.size() == 3);
+	assert(span[0] == 5);
+	assert(span[1] == 6);
+	assert(span[2] == 7);
+}
+
+static void test6()
+{
+	DynamicArray arr{};
+	addElementToArray(&arr, 5);
+	addElementToArray(&arr, 6);
+	addElementToArray(&arr, 7);
+
+	assert(arr.capacity == 4);
+	assert(arr.count == 3);
+
+	deleteArray(&arr);
+	assert(arr.capacity == 0);
+	assert(arr.count == 0);
+	assert(arr.addres == nullptr);
 }
 
 int main()
 {
-	DynamicArray array = createarray(10);
-	assert(array.capacity == 10);
+	test1();
+	test2();
+	test3();
+	test4();
+	test5();
+	test6();
 	return 0;
-
-
 }
