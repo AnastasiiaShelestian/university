@@ -1,0 +1,231 @@
+header {
+  display: flex;
+  background-color: rgb(236, 189, 189);
+  width: 99%;
+  height: 40px;
+  text-align: center;
+  color: rgb(234, 110, 203);
+  padding: 5px;
+  margin: 15px 0;
+}
+
+header p,
+header a {
+  margin: 10px;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.1s linear;
+}
+
+header a:hover {
+  color: rgb(250, 241, 241);
+}
+
+body {
+  background-color: antiquewhite;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imegesFon {
+  width: 100%;
+  height: 100px;
+  background-image: url("../imeges/fon.jpg");
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  color: azure;
+}
+
+.imegesFon2 {
+  width: 100%;
+  height: 250px;
+  background-image: url("../imeges/sk.jpg");
+  display: flex;
+  background-position: center;
+  margin: 15px;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.incontent {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.thecontent {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.thecontentt {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.png {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  margin: 15px;
+  border-radius: 6%;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.art {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.art_2 {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.art_3 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.artsize {
+  width: 330px;
+  height: 400px;
+  padding: 15px;
+  justify-content: center;
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+
+.translate:hover {
+  transform: scale(1.1);
+}
+
+.PP {
+  display: flex;
+  justify-content: center;
+}
+
+.artsize2 {
+  width: 326px;
+  height: 220px;
+  align-items: center;
+  padding: 15px;
+}
+
+.masterclas {
+  display: flex;
+  justify-content: flex-start;
+  margin: 15px;
+  width: 35%;
+}
+
+footer {
+  flex: auto;
+  background-color: rgb(236, 189, 189);
+  width: 99%;
+  height: 40px;
+  text-align: right;
+  padding: 5px;
+  margin: 15px 0;
+}
+
+.footerImg {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .incontent {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .masterclas {
+    width: auto;
+  }
+
+  .art {
+    justify-content: center;
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .art {
+    width: 50%;
+  }
+
+  .text {
+    align-items: center;
+    width: 40%;
+    margin: 5%;
+  }
+
+  .art_2 {
+    width: 50%;
+  }
+
+  .thecontent {
+    flex-direction: row;
+  }
+
+  .masterclas {
+    width: 45%;
+  }
+
+  .thecontentt {
+    width: 45%;
+  }
+}
