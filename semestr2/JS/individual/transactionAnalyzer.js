@@ -1,5 +1,5 @@
 /** Class representing an analyzer for financial transactions. */
-class TransactionAnalyzer {
+export default class TransactionAnalyzer {
     /** An array of transaction objects */
     transactions = [];
 
@@ -170,7 +170,7 @@ class TransactionAnalyzer {
     findMostDebitTransactionMonth() {
         const debitTransactions = this.getTransactionsByType('debit');
         const set = new Set();
-        debitTransactions.map(element => set.add(element.transaction_date.split('-')[1]));
+        debitTransactions.forEach(element => set.add(element.transaction_date.split('-')[1]));
 
         let mostTransactionsMonth;
         let mostTransactions = 0;
@@ -211,7 +211,7 @@ class TransactionAnalyzer {
      * @return {Object} - A transaction with the id specified.
      */
     findTransactionById(id) {
-        return this.transactions.find(element => element.transaction_id == id);
+        return this.transactions.find(element => element.transaction_id === id);
     }
 
     /**
@@ -222,5 +222,3 @@ class TransactionAnalyzer {
         return this.transactions.map(element => element.transaction_description);
     }
 }
-
-module.exports = TransactionAnalyzer;

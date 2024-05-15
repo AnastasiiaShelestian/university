@@ -1,2 +1,2 @@
 ﻿  ConsoleApplication1.cpp
-  ConsoleApplication1.vcxproj -> C:\University\university\semestr2\OOP\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
+C:\University\university\semestr2\OOP\ConsoleApplication1\ConsoleApplication1.cpp(33,16): error C2065: M_PI: необъявленный идентификатор

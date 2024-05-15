@@ -1,0 +1,7 @@
+﻿  ConsoleApplication1.cpp
+C:\University\university\semestr 2\OOP\ConsoleApplication1\ConsoleApplication1.cpp(51,39): error C2039: "getVolume": не является членом "Pencil".
+C:\University\university\semestr 2\OOP\ConsoleApplication1\ConsoleApplication1.cpp(24,7): message : см. объявление "Pencil"
+C:\University\university\semestr 2\OOP\ConsoleApplication1\ConsoleApplication1.cpp(57,39): error C2039: "getVolume": не является членом "Pencil".
+C:\University\university\semestr 2\OOP\ConsoleApplication1\ConsoleApplication1.cpp(24,7): message : см. объявление "Pencil"
+C:\University\university\semestr 2\OOP\ConsoleApplication1\ConsoleApplication1.cpp(63,39): error C2039: "getVolume": не является членом "Pencil".
+C:\University\university\semestr 2\OOP\ConsoleApplication1\ConsoleApplication1.cpp(24,7): message : см. объявление "Pencil"
