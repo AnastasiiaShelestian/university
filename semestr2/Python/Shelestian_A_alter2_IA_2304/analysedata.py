@@ -10,11 +10,11 @@ def average_salary():
                 count += 1 
         
         if sum:
-            print("Средняя зарплата по компании: ", "{:.2f}".format(sum / count))
+            return "Average salary in company: " + "{:.2f}".format(sum / count)
         else:
-            print("Записи не найдены или в данных допущена ошибка.")
+            return "Error! Records not found or there is an error in data."
     except FileNotFoundError:
-        print("Ошибка! Файл с данными не найден.")
+        return "Error! File not found."
 
 def biggest_salary():
     max = 0
@@ -28,12 +28,11 @@ def biggest_salary():
                     max = salary
 
         if result:
-            print("Сотрудник с самой высокой зарплатой:")
-            print(result)
+            return f"Employee with highest salary {result}"
         else:
-            print("Записи не найдены или в данных допущена ошибка.")
+            return "Error! Records not found or there is an error in data."
     except FileNotFoundError:
-        print("Ошибка! Файл с данными не найден.")
+        return "Error! File not found."
 
 def smallest_salary():
     min = 78000
@@ -47,16 +46,16 @@ def smallest_salary():
                     min = salary
 
         if result:
-            print("Сотрудник с самой низкой зарплатой:")
-            print(result)
+            return f"Employee with lowest salary: {result}"
         else:
-            print("Записи не найдены или в данных допущена ошибка.")
+            return "Error! Records not found or there is an error in data."
     except FileNotFoundError:
-        print("Ошибка! Файл с данными не найден.")
-
+        return "Error! File not found."
+    
 def average_salary_by_department():
     departments = set()
     data = []
+    result = []
     
     try:
         with open("data.txt", "r") as file:
@@ -75,8 +74,9 @@ def average_salary_by_department():
                         sum += float(element["salary"])
                         count += 1
                 if sum:
-                    print("Средняя зарплата по департаменту ", dep, " : ", "{:.2f}".format(sum / count))
+                    result.append("Average salary by department " + dep + " : " + "{:.2f}".format(sum / count))
+            return result
         else:
-            print("Записи не найдены или в данных допущена ошибка.")
+            return "Error! Records not found or there is an error in data."
     except FileNotFoundError:
-        print("Ошибка! Файл с данными не найден.")
+        return "Error! File not found."

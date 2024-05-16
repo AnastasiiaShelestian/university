@@ -1,37 +1,67 @@
 import ioemployees
 import analysedata
+import dearpygui.dearpygui as dpg
 
-def main():
-    while True:
-        print("\nМеню:")
-        print("1. Ввод данных в файл")
-        print("2. Просмотр данных из файла")
-        print("3. Вывод средней зарплаты в компании")
-        print("4. Вывод сотрудника с самой большой зарплатой в компании")
-        print("5. Вывод сотрудника с самой маленькой зарплатой в компании")
-        print("6. Вывод средней зарплаты по департаменту")
-        print("7. Выход из программы\n")
+def main(): 
+    dpg.create_context()
+    dpg.create_viewport(title='Alternative Anastasia', width=1200, height=900)
+    dpg.setup_dearpygui()
+
+    with dpg.font_registry():
+        default_font = dpg.add_font("Roboto-Regular.ttf", 20)
+
+    with dpg.window(label="Employee Management", width=1200, height=720):
+        global text
+        global employee_list
+
+        def show_employees():
+            data = ioemployees.view_data()
+            list = "\n".join(data)
+            dpg.set_value(employee_list, list)
+
+        def show_lowest_salary(): 
+            data = analysedata.smallest_salary()
+            dpg.set_value(text, data)
         
-        choice = input("Выберите опцию (1-7): ")
-        print("\n")
+        def show_highest_salary(): 
+            data = analysedata.biggest_salary()
+            dpg.set_value(text, data)
+
+        def show_average_salary(): 
+            data = analysedata.average_salary()
+            dpg.set_value(text, data)
         
-        if choice == "1":
-            ioemployees.input_data()
-        elif choice == "2":
-            ioemployees.view_data()
-        elif choice == "3":
-            analysedata.average_salary()
-        elif choice == "4":
-            analysedata.biggest_salary()
-        elif choice == "5":
-            analysedata.smallest_salary()
-        elif choice == "6":
-            analysedata.average_salary_by_department()
-        elif choice == "7":
-            print("Программа завершена.")
-            break
-        else:
-            print("Ошибка! Введите число от 1 до 7 для выбора опции.")
+        def show_average_per_department(): 
+            data = analysedata.average_salary_by_department()
+            list = "\n".join(data)
+            dpg.set_value(text, list)
+        
+        dpg.bind_font(default_font)
+        dpg.add_text("Employees list:")
+        employee_list = dpg.add_text("")
+        show_employees()
+        dpg.add_text("\n")
+        dpg.add_button(label="Update List", callback=show_employees, width=400, height=30)
+        dpg.add_text("\n")
+        dpg.add_button(label="Show Highest Salary", callback=show_highest_salary, width=400, height=30)
+        dpg.add_button(label="Show Lowest Salary", callback=show_lowest_salary, width=400, height=30)
+        dpg.add_button(label="Show Average Salary", callback=show_average_salary, width=400, height=30)
+        dpg.add_button(label="Show Average Salary per Department", callback=show_average_per_department, width=400, height=30)
+        dpg.add_text("\n")
+        text = dpg.add_text("")
+        dpg.add_text("\n")
+
+        dpg.add_text("Add Employee:")
+        dpg.add_input_text(label="Surname", tag="surname", width=400)
+        dpg.add_input_text(label="Name", tag="name", width=400)
+        dpg.add_input_text(label="Department", tag="department", width=400)
+        dpg.add_input_text(label="Salary", tag="salary", width=400)
+        dpg.add_button(label="Submit", callback=ioemployees.input_data, width=400, height=30)
+        dpg.add_text("", tag="error")
+
+    dpg.show_viewport()
+    dpg.start_dearpygui()
+    dpg.destroy_context()
 
 if __name__ == "__main__":
     main()

@@ -1,19 +1,26 @@
 import re
 
+import re
+from datetime import datetime, date
+
 class Employee:
     def __init__(self, name, phone, bday, email, position):
-        self.name = name
-        self.phone = phone
-        self.bday = bday
-        self.email = email
-        self.position = position
+        self.__name = name  # приватные переменные
+        self.__phone = phone
+        self.__bday = bday
+        self.__email = email
+        self.__position = position
 
-    def calculateAge(self):
-        pass
+    def calculate_age(self):
+        birth_date = datetime.strptime(self.__bday, '%d.%m.%Y')
+        today = date.today()
+        age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
+        return age
 
-    def _calculateSalary(self):
-        pass
+    def _calculate_salary(self):
+        pass  # защищенный и пустой метод
 
+    # Версия с декораторами
     @property
     def name(self):
         return self.__name
@@ -24,6 +31,18 @@ class Employee:
             self.__name = value
         else:
             raise ValueError("Имя должно содержать только буквы")
+
+    # Версия с использованием property()
+    def get_name(self):
+        return self.__name
+
+    def set_name(self, value):
+        if re.match(r'^[a-zA-Zа-яА-Я]{2,20}(?:-[a-zA-Zа-яА-Я]{2,20}){0,3}$', value):
+            self.__name = value
+        else:
+            raise ValueError("Имя должно содержать только буквы")
+
+    name = property(get_name, set_name)
 
     @property
     def phone(self):
@@ -67,11 +86,12 @@ class Employee:
         if re.match(r'^[a-zA-Zа-яА-Я]{2,20}(?:-[a-zA-Zа-яА-Я]{2,20}){0,3}$', value):
             self.__position = value
         else:
-            raise ValueError("Должность должна содержать только буквы и иметь название в диапазоне от 4 до 20 символов")
+            raise ValueError("Должность должна содержать только буквы и иметь название в диапазоне от 2 до 20 символов")
+
 
 class HourlyEmployee(Employee):
     def __init__(self, name, phone, bday, email, position, hours, hourlyPay):
-        super().__init__(name, phone, bday, email, position)
+        super().__init__(name, phone, bday, email, position) # вызывает метод из родительского класса(в данном случае конструктор)
         self.__hours = hours
         self.__hourlyPay = hourlyPay
 

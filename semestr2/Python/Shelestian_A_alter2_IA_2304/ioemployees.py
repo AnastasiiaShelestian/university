@@ -1,42 +1,49 @@
 import re
+import dearpygui.dearpygui as dpg
 
 def input_data():
-    while True:
-        surname = input("Введите фамилию сотрудника: ").upper()
+    surname = dpg.get_value("surname")
+    name = dpg.get_value("name")
+    department = dpg.get_value("department")
+    salary = dpg.get_value("salary")
+
+    try:
         if not re.match("^[a-zA-Zа-яА-Я]{2,20}(?:-[a-zA-Zа-яА-Я]{2,20}){0,3}$", surname):
-            print("Ошибка! Фамилия должна содержать только буквы и дефис, длиной от 2 до 20 символов.")
-            continue
+            raise ValueError("Error! Surname must contain only letters and -, length from 2 to 20 characters.")
         
-        name = input("Введите имя сотрудника: ").upper()
         if not re.match("^[a-zA-Zа-яА-Я]{2,20}(?:-[a-zA-Zа-яА-Я]{2,20}){0,3}$", name):
-            print("Ошибка! Имя должно содержать только буквы и дефис, длиной от 2 до 20 символов.")
-            continue
+            raise ValueError("Error! Name must contain only letters and -, length from 2 to 20 characters.")
         
-        department = input("Введите отдел сотрудника: ").upper()
         if not re.match("^[a-zA-Zа-яА-Я]{2,15}( [a-zA-Zа-яА-Я]{2,15}){0,5}$", department):
-            print("Ошибка! Название отдела должно содержать буквы и пробелы.")
-            continue
+            raise ValueError("Error! Department name should only contain letters and spaces.")
         
         try:
-            salary = float(input("Введите зарплату сотрудника: "))
-            if not 1000.00 <= salary <= 77000.00:
-                print("Ошибка! Зарплата должна быть от 1000.00 до 77000.00.")
-                continue
+            salaryProcessed = float(salary)
         except ValueError:
-            print("Ошибка! Введите вещественное число для зарплаты сотрудника.")
-            continue
+            raise ValueError("Error! Salary must be a number!")
+        if not 1000.00 <= salaryProcessed <= 77000.00:
+            raise ValueError("Error! Salary must be from 1000.00 to 77000.00.")
+
+    except ValueError as e:
+        dpg.set_value("error", e)
+        return
         
-        with open("data.txt", "a") as file:
-            file.write(f"{surname}\t{name}\t{department}\t{salary}\n")
+    with open("data.txt", "a") as file:
+        file.write(f"{surname}\t{name}\t{department}\t{salary}\n")
+    dpg.set_value("error", "")
+    dpg.set_value("surname", "")
+    dpg.set_value("name", "")
+    dpg.set_value("department", "")
+    dpg.set_value("salary", "")
         
-        break
 
 def view_data():
+    data = []
     try:
         with open("data.txt", "r") as file:
             for line in file:
                 surname, name, department, salary = line.strip().split("\t")
-                print(f"Сотрудник: {surname} {name}, отдел: {department}, зарплата: {salary}")
-        
+                data.append(f"Employee: {surname} {name}, department: {department}, salary: {salary}")
+            return data
     except FileNotFoundError:
-        print("Ошибка! Файл с данными не найден.")
+        return "Error! File not found."

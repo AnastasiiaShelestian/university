@@ -20,8 +20,8 @@ try:
 
     hour_emp1 = HourlyEmployee(name, phone, bday, email, position, hours, hourlyPay)
 
-    print("Hourly Employee 1 Salary:", hour_emp1._calculateSalary())
-    print("Salary Employee 1 Salary:", salary_emp1._calculateSalary())
+    print("Зарплата сотрудника который работает почасово:", hour_emp1._calculateSalary())
+    print("Зарплата сотрудника:", salary_emp1._calculateSalary())
 
 except ValueError as e:
     print("Error:", e)
