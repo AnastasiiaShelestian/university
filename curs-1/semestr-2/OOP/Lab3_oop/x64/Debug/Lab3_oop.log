@@ -1,0 +1,3 @@
+﻿  Lab3_oop.cpp
+C:\University\university\semestr 2\OOP\Lab3_oop\Lab3_oop.cpp(88,35): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+  Lab3_oop.vcxproj -> C:\University\university\semestr 2\OOP\Lab3_oop\x64\Debug\Lab3_oop.exe

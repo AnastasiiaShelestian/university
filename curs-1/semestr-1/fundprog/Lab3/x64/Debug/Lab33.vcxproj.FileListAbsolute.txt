@@ -1,0 +1,2 @@
+C:\University\university\fundprog\Lab33\x64\Debug\Lab33.exe
+C:\University\university\fundprog\Lab3\x64\Debug\Lab33.exe

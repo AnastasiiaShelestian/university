@@ -1,0 +1,20 @@
+﻿  Lab1.cpp
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(202,73): warning C4129: %: неизвестная escape-последовательность
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(409,57): warning C4129: %: неизвестная escape-последовательность
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(101,53): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(105,53): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(109,53): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(113,53): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(166,18): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(183,19): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(198,24): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(234,33): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(320,53): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(324,53): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(328,53): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(332,53): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(390,27): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(432,16): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(461,16): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\University\university\semestr2\OOP\lab1\Lab1.cpp(96): warning C4715: IP::getClass: значение возвращается не при всех путях выполнения
+  Lab1.vcxproj -> C:\University\university\semestr2\OOP\lab1\x64\Debug\Lab1.exe

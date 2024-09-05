@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Transactions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Transactions</h1>
+    <table id="transactions">
+      <tr>
+        <th>ID</th>
+        <th>Дата и Время</th>
+        <th>Сумма</th>
+        <th>Категория Транзакции</th>
+        <th>Краткое описание транзакции</th>
+        <th>Действие</th>
+      </tr>
+    </table>
+    <p>Total Amount: <span id="total">0</span></p>
+    <div class="description">
+        <div id="desc_id"></div>
+        <div id="desc_date"></div>
+        <div id="desc_amount"></div>
+        <div id="desc_category"></div>
+        <div id="desc_desc"></div>
+    </div>
+    <div class="separator"></div>
+    <h1>Add Transaction</h1>
+    <form id="add_transaction" onsubmit="return false">
+      <input
+        type="number"
+        id="tr_id"
+        name="tr_id"
+        placeholder="ID"
+        min="1"
+        required
+      />
+      <input type="date" id="tr_date" name="tr_date" required />
+      <input
+        type="number"
+        id="tr_amount"
+        name="tr_amount"
+        placeholder="Amount"
+        required
+      />
+      <select id="tr_category" name="tr_category" required>
+        <option value="" disabled selected>Category</option>
+        <option value="Expenses">Expenses</option>
+        <option value="Income">Income</option>
+        <option value="Transfer">Transfer</option>
+      </select>
+      <input
+        type="text"
+        id="tr_desc"
+        name="tr_desc"
+        placeholder="Short Description"
+        required
+      />
+      <input type="submit" value="submit" />
+    </form>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

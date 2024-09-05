@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lab4</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>1</h1>
+    <div class="block1 block"></div>
+    <div class="block2 block"></div>
+    <div class="block3 block"></div>
+    <div class="block4 block"></div>
+    <div class="block5 block"></div>
+
+    <h1>2</h1>
+    <form>
+      <fieldset class="maincontainer">
+        <div class="content inline firstblock">
+          <fieldset>
+            <legend>Date personale</legend>
+            <div>
+              <p>*Numele:</p>
+              <input type="text" pattern="^[a-zA-Z]+$" required />
+            </div>
+            <div>
+              <p>*Prenumele:</p>
+              <input type="text" pattern="^[A-Za-z]+$" required />
+            </div>
+            <div>
+              <p>E-mail:</p>
+              <input type="email" />
+            </div>
+            <div>
+              <p>*Data nasterii:</p>
+              <input type="date" required />
+            </div>
+            <div class="radio">
+              <p>Sexul:</p>
+              <input name="sex" type="radio" value="F" />F
+              <input name="sex" type="radio" value="M" />M
+            </div>
+            <div>
+              <p>Telefonul:</p>
+              <input type="number" />
+            </div>
+            <div>
+              <p>Raionul:</p>
+              <select>
+                <option></option>
+                <option>Orhei</option>
+                <option>Soroca</option>
+                <option>Chisinau</option>
+              </select>
+            </div>
+            <div>
+              <p>Studii:</p>
+              <div class="checkbox">
+                <div>
+                  <input type="checkbox" name="a" value="Colegiu" />
+                  <p>Colegiu</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="a" value="Licenta" />
+                  <p>Licenta</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="a" value="Masterat" />
+                  <p>Masterat</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p>Suplimentar:</p>
+              <textarea placeholder="Scrie aici" maxlength="1000"></textarea>
+            </div>
+          </fieldset>
+          <div>
+            <button type="reset">Anuleaza</button>
+            <button type="submit">Trimite</button>
+          </div>
+        </div>
+        <div class="inline">
+          <div class="content customborder">
+            <fieldset>
+              <legend>Date despre product ales</legend>
+              <div>
+                <p>*Denumirea produs:</p>
+                <input type="text" pattern="^[a-zA-Z]+$" required />
+              </div>
+              <div>
+                <p>*Producatorul:</p>
+                <input type="text" pattern="^[a-zA-Z]+$" required />
+              </div>
+              <div>
+                <p>*Cantitatea de produs:</p>
+                <input type="number" required />
+              </div>
+              <div>
+                <p>*Culoarea:</p>
+                <input type="color" required />
+              </div>
+              <div>
+                <p>*Marimea:</p>
+                <input type="number" required />
+              </div>
+            </fieldset>
+          </div>
+          <div class="content blackshadow">
+            <fieldset>
+              <legend>Date bancare</legend>
+              <div class="radio">
+                <p>*Tipul cardului:</p>
+                <input name="card" type="radio" value="Visa" required />Visa
+                <input name="card" type="radio" value="Mastercard" />Mastercard
+              </div>
+              <div>
+                <p>*Numarul cardului:</p>
+                <input type="number" required />
+              </div>
+              <div>
+                <p>*Expira:</p>
+                <input type="date" required />
+              </div>
+            </fieldset>
+            <p style="width: 100%">*Campul trebuie sa fie completat</p>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    <h1>3</h1>
+    <h2>DOGS</h2>
+    <ol>
+      <li><h3>food for Dogs</h3></li>
+      <li><p>puppy food</p></li>
+      <li><p>adult dog food</p></li>
+      <li><p>food for sterilized dogs</p></li>
+    </ol>
+    <h2>CATS</h2>
+    <ul type="circle">
+      <li><h3>food for Cats</h3></li>
+      <li><p>kitten food</p></li>
+      <li><p>adult cats food</p></li>
+      <li><p>food for sterilized cats</p></li>
+    </ul>
+    <p class="text">
+      Мне нравится, что Вы больны не мной,<br />
+      Мне нравится, что я больна не Вами,<br />
+      Что никогда тяжелый шар земной<br />
+      Не уплывет под нашими ногами.<br />
+    </p>
+
+    <h1>4</h1>
+    <a class="link" href="https://htmlbook.ru/css/link" target="_blank"
+      >MY LINK</a
+    >
+  </body>
+</html>

@@ -1,0 +1,6 @@
+﻿  dynamicArray.cpp
+  Lab_4_Anastasiia.cpp
+  Создание кода...
+C:\University\university\ASD\Lab_4_Anastasiia\dynamicArray.cpp(47): warning C4715: getCurrentSpan: значение возвращается не при всех путях выполнения
+C:\University\university\ASD\Lab_4_Anastasiia\dynamicArray.cpp(62): warning C4715: getElementAtIndex: значение возвращается не при всех путях выполнения
+  Lab_4_Anastasiia.vcxproj -> C:\University\university\ASD\Lab_4_Anastasiia\x64\Debug\Lab_4_Anastasiia.exe

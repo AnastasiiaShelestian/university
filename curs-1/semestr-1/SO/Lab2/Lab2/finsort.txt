@@ -1,0 +1,4 @@
+[1]Friday
+[2]Monday
+[4]Sunday
+[7]Wednesday
