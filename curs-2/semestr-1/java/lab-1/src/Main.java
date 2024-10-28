@@ -1,8 +1,19 @@
+import java.sql.Array;
+import java.util.List;
+
+interface Talking {
+    void talk();
+}
+
+interface Feedable {
+    boolean canFeed(String food);
+}
+
 class Animal {
 
-    String name;
-    String color;
-    int age;
+    private String name;
+    private String color;
+    private int age;
 
     public Animal(String name, String color, int age) {
         setName(name);
@@ -55,8 +66,8 @@ class Animal {
     }
 }
 
-class Cat extends Animal {
-    int numberOfWhiskers;
+class Cat extends Animal implements Talking {
+    private int numberOfWhiskers;
 
     public Cat(String name, String color, int age, int numberOfWhiskers) {
         super(name, color, age);
@@ -86,10 +97,14 @@ class Cat extends Animal {
         }
         return false;
     }
+
+    public void talk() {
+        System.out.println("meow-meow");
+    }
 }
 
-class Hedgehog extends Animal {
-    int numberOfNeedles;
+class Hedgehog extends Animal implements Talking, Feedable {
+    private int numberOfNeedles;
 
     public Hedgehog(String name, String color, int age, int numberOfNeedles) {
         super(name, color, age);
@@ -113,15 +128,26 @@ class Hedgehog extends Animal {
     public boolean equals(Object obj) {
         if (obj instanceof Hedgehog) {
             Hedgehog objAsHedgehog = (Hedgehog) obj;
-            if(super.equals(obj) && objAsHedgehog.getNumberOfNeedles() == this.numberOfNeedles)
+            if (super.equals(obj) && objAsHedgehog.getNumberOfNeedles() == this.numberOfNeedles)
                 return true;
+        }
+        return false;
+    }
+
+    public void talk() {
+        System.out.println("hhhh-hhhh");
+    }
+
+    public boolean canFeed(String food) {
+        if (food.equals("apple") || food.equals("pear")) {
+            return true;
         }
         return false;
     }
 }
 
-class Snake extends Animal {
-    int length;
+class Snake extends Animal implements Talking {
+    private int length;
 
     public Snake(String name, String color, int age, int length) {
         super(name, color, age);
@@ -145,16 +171,20 @@ class Snake extends Animal {
     public boolean equals(Object obj) {
         if (obj instanceof Snake) {
             Snake objAsSnake = (Snake) obj;
-            if(super.equals(obj) && objAsSnake.getLength() == this.length)
+            if (super.equals(obj) && objAsSnake.getLength() == this.length)
                 return true;
         }
         return false;
     }
+
+    public void talk() {
+        System.out.println("chh-chh");
+    }
 }
 
 class Main {
-
     public static void main(String[] args) {
+
         Animal testAnimal = new Animal("luna", "grey", 2);
         Cat testCat = new Cat("Muscat", "red", 7, 30);
         Hedgehog testHedgehod = new Hedgehog("Moon", "yellow", 1, 40);
@@ -162,6 +192,18 @@ class Main {
         Cat testCat3 = new Cat("Muscat", "yellow", 7, 30);
         System.out.println(testAnimal + "\n" + testHedgehod + "\n" + testCat);
         System.out.println(testCat.equals(testCat2) + "\n" + testCat.equals(testAnimal) + "\n" + testCat.equals(testCat3));
+        System.out.println(testHedgehod.canFeed("apple"));
+
+
+        Animal[] animals = new Animal[]{testAnimal, testCat, testCat2, testCat3, testHedgehod};
+        for (Animal animal : animals) {
+            System.out.println(animal.toString());
+        }
+
+        Talking[] talkingAnimals = new Talking[]{testCat, testCat2, testHedgehod};
+        for (Talking talkingAnimal : talkingAnimals) {
+            talkingAnimal.talk();
+        }
     }
 }
 
